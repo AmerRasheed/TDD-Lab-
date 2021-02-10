@@ -12,7 +12,7 @@ public class EmployeeTest {
    // private Employee testObjectEmployee;
     @Test
     void testEmployee() {
- Employee testObjectEmployee = new Employee(1,"Test First Name", "Test Last Name", 34);
+    Employee testObjectEmployee = new Employee(1,"Test First Name", "Test Last Name", 34, 20000);
 
     }
 }
