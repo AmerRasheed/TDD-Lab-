@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Employee {
     int ID;
     String first_name;
@@ -13,13 +15,12 @@ public class Employee {
     this.salary=salary;
     }
 
+
     public int getID() {
         return ID;
     }
     //TODO should we need to set ID ??
-    public void setID(int ID) {
-        this.ID = ID;
-    }
+
 
     public String getFirst_name() {
         return first_name;
@@ -52,16 +53,20 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    public static Employee[] employees = new Employee[0];
+    public void createEmployeeList() {
+       Employee employee = new Employee(incrementEmployeeId.nextEmployeeId(),getFirst_name(),getLast_name(),getAge(),getSalary());
+       employees = Arrays.copyOf(employees, employees.length+1);
+       employees[employees.length-1]=employee;
+           }
+
+    public static int autoIncremeID(int ID) {
+
+            return ++ID;
+
+
+    }
 }
 
-
- /*   public Employee(int ID,
-                    String first_name,
-                    String last_name,
-                     int Age,
-                    int salary
-    )
-
-    {
-    }*/
 

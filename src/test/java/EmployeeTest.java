@@ -15,4 +15,10 @@ public class EmployeeTest {
     Employee testObjectEmployee = new Employee(1,"Test First Name", "Test Last Name", 34, 20000);
 
     }
+
+    @Test
+    void autoIncrementEmployeeId() {
+        Employee testObjectEmployee = new Employee(1,"Test First Name", "Test Last Name", 34, 20000);
+     //   testObjectEmployee.autoIncrementID();
+    }
 }
