@@ -7,6 +7,10 @@ public class EmployeeListTest {
     @Test
     void testEmployeeList() {
         Employee testObjectEmployeeList = new Employee(1,"Test First Name", "Test Last Name", 34, 20000);
+        EmployeeList employeeList = new EmployeeList();
+        employeeList.createEmployeeList();
+
+
     }
     @Test
     void test_Create_Employee_Function () {
