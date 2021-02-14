@@ -7,12 +7,12 @@ public class Employee {
     int Age;
     int salary;
 
-   public Employee(int ID,String first_name, String last_name, int Age, int salary){
-    this.ID=ID;
-    this.first_name=first_name;
-    this.last_name=last_name;
-    this.Age=Age;
-    this.salary=salary;
+    public Employee( String first_name, String last_name, int Age, int salary) {
+        this.ID = autoIncrementID();
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.Age = Age;
+        this.salary = salary;
     }
 
 
@@ -55,18 +55,25 @@ public class Employee {
     }
 
     public static Employee[] employees = new Employee[0];
+/*
     public void createEmployeeList() {
-       Employee employee = new Employee(incrementEmployeeId.nextEmployeeId(),getFirst_name(),getLast_name(),getAge(),getSalary());
-       employees = Arrays.copyOf(employees, employees.length+1);
-       employees[employees.length-1]=employee;
-           }
+        //Employee employee = new Employee(incrementEmployeeId.nextEmployeeId(), getFirst_name(), getLast_name(), getAge(), getSalary());
+        Employee employee = new Employee(autoIncrementID(ID), getFirst_name(), getLast_name(), getAge(), getSalary());
 
-    public static int autoIncremeID(int ID) {
-
-            return ++ID;
-
-
+        employees = Arrays.copyOf(employees, employees.length + 1);
+        employees[employees.length - 1] = employee;
     }
+  */
+    public int autoIncrementID() {
+         return incrementEmployeeId.nextEmployeeId();
+             }
+
+    public void increaseSalary(int percentage){
+         if(percentage<100)
+        salary= salary + getSalary() * percentage/100 ;
+            }
+
+
 }
 
 

@@ -6,21 +6,44 @@ import org.junit.jupiter.api.Test;
 public class EmployeeListTest {
     @Test
     void testEmployeeList() {
-        Employee testObjectEmployeeList = new Employee(1,"Test First Name", "Test Last Name", 34, 20000);
+        Employee testObjectEmployeeList = new Employee("Test First Name", "Test Last Name", 34, 20000);
         EmployeeList employeeList = new EmployeeList();
-        employeeList.createEmployeeList();
+        employeeList.addEmployee(1,"Habib","Jaalib",20,40000);
 
-
-    }
+        //Assertions.assertEquals();
+                            }
     @Test
     void test_Create_Employee_Function () {
-        Employee testObjectEmployeeList = new Employee(1,"Test First Name", "Test Last Name", 34, 20000);
-        testObjectEmployeeList.createEmployeeList();
+
+        EmployeeList e;
+        Employee testObjectEmployeeList = new Employee("Amer", "Rasheed", 34, 20000);
+        //Employee expected = "Amer";
+
+     /*   @Test
+                void check_Added_Employee(){
+
+        }
+*/
+
+
+        /*
+        int expected=1;
+
+         actual = e.createEmployeeList(testObjectEmployeeList.getID(),
+                testObjectEmployeeList.getFirst_name(),
+                testObjectEmployeeList.getLast_name(),
+                testObjectEmployeeList.getAge(),
+                testObjectEmployeeList.getSalary());
+
+        Assertions.assertEquals(expected,actual);
+*/
+
+        //testObjectEmployeeList.createEmployeeList(1,"Amer","Rasheed",34, 20000);
     }
 
     @Test
     void test_to_check_Employee_Class() {
-        Employee testObjectEmployeeList = new Employee(1,"Amer", "Rasheed", 34, 20000);
+        Employee testObjectEmployeeList = new Employee("Amer", "Rasheed", 34, 20000);
         Assertions.assertEquals(1,testObjectEmployeeList.getID());
         Assertions.assertEquals("Amer",testObjectEmployeeList.getFirst_name());
         Assertions.assertEquals("Rasheed",testObjectEmployeeList.getLast_name());
