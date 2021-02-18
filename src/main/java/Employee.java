@@ -8,7 +8,8 @@ public class Employee {
     int salary;
 
     public Employee( String first_name, String last_name, int Age, int salary) {
-        this.ID = autoIncrementID();
+        //this.ID = autoIncrementID();
+        this.ID = incrementEmployeeId.nextEmployeeId();
         this.first_name = first_name;
         this.last_name = last_name;
         this.Age = Age;
@@ -64,16 +65,16 @@ public class Employee {
         employees[employees.length - 1] = employee;
     }
   */
-    public int autoIncrementID() {
-         return incrementEmployeeId.nextEmployeeId();
-             }
+    //public int autoIncrementID() {        return incrementEmployeeId.nextEmployeeId();        }
 
-    public void increaseSalary(int percentage){
-         if(percentage<100)
-        salary= salary + getSalary() * percentage/100 ;
-            }
+// TODO can we check FUNCTION that returns nothing, if so How we will create ACTUAL in assertion??
 
 
+    public int increaseSalary(int percentage){
+        if(percentage<100)
+        salary = salary + getSalary() * percentage/100 ;
+        return salary;
+        }
 }
 
 

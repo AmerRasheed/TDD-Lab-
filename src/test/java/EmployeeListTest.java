@@ -5,14 +5,40 @@ import org.junit.jupiter.api.Test;
 //It must be possible to add and remove employees to the list in the personnel system.
 public class EmployeeListTest {
     @Test
-    void testEmployeeList() {
+    void testEmployeeList_Add_Employee() {
+       EmployeeList testEmployeeObject = new EmployeeList();
+       testEmployeeObject.addEmployee();
+       /*
         Employee testObjectEmployeeList = new Employee("Test First Name", "Test Last Name", 34, 20000);
         EmployeeList employeeList = new EmployeeList();
-        employeeList.addEmployee(1,"Habib","Jaalib",20,40000);
+        employeeList.addEmployee();
 
-        //Assertions.assertEquals();
-                            }
+        int expected = 1;
+        int actual = testObjectEmployeeList.getID();
+        Assertions.assertEquals(expected,actual);
+         */                   }
+/*
     @Test
+    void testEmployeeList_Add_Second_Record() {
+        Employee testObjectEmployeeList = new Employee("Test First Name", "Test Last Name", 34, 20000);
+        EmployeeList employeeList = new EmployeeList();
+     //   employeeList.addEmployee("Habib","Jaalib",20,40000);
+        int expected = 2;
+        int actual = testObjectEmployeeList.getID();
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    void testEmployeeList_Add_Third_Record() {
+        Employee testObjectEmployeeList = new Employee("Test First Name", "Test Last Name", 34, 20000);
+        EmployeeList employeeList = new EmployeeList();
+      //  employeeList.addEmployee("Habib","Jaalib",20,40000);
+        int expected = 3;
+        int actual = testObjectEmployeeList.getID();
+        Assertions.assertEquals(expected,actual);
+    }
+  */
+   /* @Test
     void test_Create_Employee_Function () {
 
         EmployeeList e;
@@ -39,8 +65,7 @@ public class EmployeeListTest {
 */
 
         //testObjectEmployeeList.createEmployeeList(1,"Amer","Rasheed",34, 20000);
-    }
-
+/*
     @Test
     void test_to_check_Employee_Class() {
         Employee testObjectEmployeeList = new Employee("Amer", "Rasheed", 34, 20000);
@@ -50,4 +75,5 @@ public class EmployeeListTest {
         Assertions.assertEquals(34, testObjectEmployeeList.getAge());
         Assertions.assertEquals(20000,testObjectEmployeeList.getSalary());
         }
+*/
 }

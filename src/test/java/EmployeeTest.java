@@ -52,7 +52,7 @@ public class EmployeeTest {
     void autoIncrementEmployeeId() {
         Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
        // testObjectEmployee.autoIncrementID();
-    testObjectEmployee.autoIncrementID();
+  //  testObjectEmployee.autoIncrementID();
 
     }
 
@@ -60,9 +60,41 @@ public class EmployeeTest {
     void check_salary_increase(){
         Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
         int exptected = 30000;
-       //boolean actual = testObjectEmployee.increaseSalary(10);
-       //int actual = testObjectEmployee.increaseSalary(10);
-        //Assertions.assertEquals(exptected,actual);
+
+        //boolean actual = testObjectEmployee.increaseSalary(10);
+
+        int actual = testObjectEmployee.increaseSalary(50);
+        Assertions.assertEquals(exptected,actual);
         //Assertions.assertTrue(testObjectEmployee.increaseSalary());
     }
+
+    @Test
+    void check_salary_increase_percentage_greater_than_100(){
+
+        Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
+
+        int exptected=testObjectEmployee.salary;
+
+        int actual = testObjectEmployee.increaseSalary(110);
+
+        Assertions.assertEquals(exptected,actual);
+
+    }
+
+    @Test
+    void check_salary_increase_percentage_less_than_100(){
+
+        Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
+
+        int exptected=testObjectEmployee.salary;
+
+        int percentage=50;
+
+        exptected = exptected + testObjectEmployee.salary*percentage/100;
+
+        int actual = testObjectEmployee.increaseSalary(percentage); // to CONFIRM
+
+        Assertions.assertEquals(exptected,actual);
+    }
+
 }
