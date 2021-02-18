@@ -27,28 +27,25 @@ public class EmployeeTest {
    }
     @Test
     void testEmployeeLast_Name() {
-    Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
-        String expected = "Test Last Name";                // Test Code
-        String actual = testObjectEmployee.getLast_name(); // CUT
-        Assertions.assertEquals(expected, actual);         // Assertions
+       Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
+       String expected = "Test Last Name";                // Test Code
+       String actual = testObjectEmployee.getLast_name(); // CUT
+       Assertions.assertEquals(expected, actual);         // Assertions
     }
     @Test
     void testEmployee_Age() {
-        Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
-        int expected = 34;                // Test Code
-        int actual = testObjectEmployee.getAge(); // CUT
-        Assertions.assertEquals(expected, actual);         // Assertions
+       Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
+       int expected = 34;                // Test Code
+       int actual = testObjectEmployee.getAge(); // CUT
+       Assertions.assertEquals(expected, actual);         // Assertions
     }
     @Test
     void testEmployee_Salary() {
-        Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
-        int expected = 20000;                // Test Code
-        int actual = testObjectEmployee.getSalary(); // CUT
-        Assertions.assertEquals(expected, actual);         // Assertions
+       Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
+       int expected = 20000;                // Test Code
+       int actual = testObjectEmployee.getSalary(); // CUT
+       Assertions.assertEquals(expected, actual);         // Assertions
     }
-
-    // it will fail
-
     @Test
     void autoIncrementEmployeeId() {
         Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
@@ -69,30 +66,19 @@ public class EmployeeTest {
 
     @Test
     void check_salary_increase_percentage_greater_than_100(){
-
         Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
-
         int exptected=testObjectEmployee.salary;
-
         int actual = testObjectEmployee.increaseSalary(110);
-
         Assertions.assertEquals(exptected,actual);
-
     }
 
     @Test
     void check_salary_increase_percentage_less_than_100(){
-
         Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
-
         int exptected=testObjectEmployee.salary;
-
         int percentage=50;
-
         exptected = exptected + testObjectEmployee.salary*percentage/100;
-
         int actual = testObjectEmployee.increaseSalary(percentage); // to CONFIRM
-
         Assertions.assertEquals(exptected,actual);
     }
 
