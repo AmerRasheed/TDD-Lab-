@@ -18,8 +18,8 @@ public class EmployeeListTest {
     void testEmployeeList_Remove_Employee(){
        EmployeeList testEmployeeObject = new EmployeeList();
        //testEmployeeObject.removeEmployee();
-       testEmployeeObject.remove(3);
-       int expected=0;
+       testEmployeeObject.remove(1);
+       int expected=1;
        int actaul = testEmployeeObject.size();
        Assertions.assertEquals(expected,actaul);
        }
