@@ -8,6 +8,9 @@ public class EmployeeListTest {
     void testEmployeeList_Add_Employee() {
        EmployeeList testEmployeeObject = new EmployeeList();
        testEmployeeObject.addEmployee();
+       int expected=1;
+       int actaul = testEmployeeObject.size();
+       Assertions.assertEquals(expected,actaul);
        /*
         Employee testObjectEmployeeList = new Employee("Test First Name", "Test Last Name", 34, 20000);
         EmployeeList employeeList = new EmployeeList();

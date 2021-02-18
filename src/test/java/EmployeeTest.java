@@ -12,6 +12,13 @@ import org.junit.jupiter.api.Test;
 public class EmployeeTest {
    // private Employee testObjectEmployee;
    @Test
+   void testEmployee_ID() {
+       Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
+       int expected = 1;                // Test Code
+       int actual = testObjectEmployee.getID(); // CUT
+       Assertions.assertEquals(expected, actual);         // Assertions
+   }
+   @Test
    void testEmployeeFirst_Name() {
        Employee testObjectEmployee = new Employee("Usman", "Iftikhar", 22, 80000);
        String expected = "Usman";                // Test Code
@@ -41,28 +48,20 @@ public class EmployeeTest {
     }
 
     // it will fail
-    @Test
-    void testEmployee_ID() {
-        Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
-        int expected = 1;                // Test Code
-        int actual = testObjectEmployee.getID(); // CUT
-        Assertions.assertEquals(expected, actual);         // Assertions
-    }
+
     @Test
     void autoIncrementEmployeeId() {
         Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
-       // testObjectEmployee.autoIncrementID();
-  //  testObjectEmployee.autoIncrementID();
-
+        int expected = 1;
+        int actual = testObjectEmployee.getID();
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void check_salary_increase(){
         Employee testObjectEmployee = new Employee("Test First Name", "Test Last Name", 34, 20000);
         int exptected = 30000;
-
         //boolean actual = testObjectEmployee.increaseSalary(10);
-
         int actual = testObjectEmployee.increaseSalary(50);
         Assertions.assertEquals(exptected,actual);
         //Assertions.assertTrue(testObjectEmployee.increaseSalary());

@@ -7,7 +7,14 @@ public class EmployeeList {
     public int size(){
         return persize;
     }
-    
+
+    public void addEmployee() {
+        Employee employeeToAdd = new Employee("First_Name","Last_Name",34,3300);
+        EmployeeList  = Arrays.copyOf(EmployeeList, EmployeeList.length + 1 );
+        EmployeeList[EmployeeList.length-1] = employeeToAdd;
+        persize++;
+    }
+
   /*  public Employee addEmployee(String First_Name, String Last_Name, int Age, int Salary ) {
         Employee employeeToAdd = new Employee(First_Name,Last_Name,Age,Salary);
         EmployeeList  = Arrays.copyOf(EmployeeList, EmployeeList.length + 1 );
@@ -67,7 +74,6 @@ public class EmployeeList {
                 flag = true;
             }
         }
-
         //for(int i=0;i<any.length;i++) //Todo-> Person-> fields
         //  System.out.println((any[i].getAssignee().getFirstName()));
         System.out.println("Persons left in the persons array after removing a person");
@@ -87,7 +93,7 @@ public class EmployeeList {
         //return EmployeeList.length;
     }
 
-    public void increaseSalaryInList (int percentage, String first_name){
+    public void increaseSalary_Of_Specific_Employee_in_List (int percentage, String first_name){
         EmployeeList[] newarray = new EmployeeList[0];
         EmployeeList send = null;
         for (Employee name : EmployeeList ) {
@@ -98,6 +104,5 @@ public class EmployeeList {
 
     }
 
-    public void addEmployee() {
-    }
+
 }
