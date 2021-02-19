@@ -1,6 +1,49 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
-public class EmployeeList {
+    public class EmployeeList {
+    ArrayList<Employee> employees = new ArrayList<>();
+   /* public void showList(){
+        for (Employee name : employees ) {
+            System.out.println(name.getID());
+            System.out.print(name.getFirst_name());
+            System.out.print(name.getLast_name());
+            System.out.print(name.getAge());
+            System.out.print(name.getSalary());
+            System.out.println();
+            // System.out.println("New salary is "+ name.getSalary());
+        }
+    }*/
+    public void addListEmployee() {
+        Employee employee1 = new Employee("Amer","Rasheed", 33,30000);
+        employees.add(employee1);
+      /*  Employee employee2 = new Employee("Amer1","Rasheed1", 33,20000);
+        employees.add(employee2);
+        Employee employee3 = new Employee("Amer2","Rasheed1", 33,150000);
+        employees.add(employee3);
+*/
+    }
+
+    public int checkListSize() {
+        return employees.size();
+    }
+
+    public void removeListEmployee(String FName) {
+     // Employee employee1 = new Employee("Misbah","Iman", 33,30000);
+        employees.remove(FName);
+    }
+
+    public int increaseSalary_Of_Specific_Employee_in_List (int percentage, String first_name){
+        int send = 0;
+        for (Employee name : employees ) {
+            if (name.getFirst_name() == first_name)
+                send = (int) name.increaseSalary(percentage);
+            System.out.println("New salary is "+ name.getSalary());
+        }
+        System.out.println("List is "+employees);
+        return send;
+    }
+    /*
     private static Employee[] EmployeeList = new Employee[0];
         int persize = EmployeeList.length;
 
@@ -77,4 +120,6 @@ public class EmployeeList {
             System.out.println("New salary is "+ name.getSalary());
       }
     }
+
+     */
 }

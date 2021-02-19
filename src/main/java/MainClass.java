@@ -1,9 +1,55 @@
 import java.util.*;
 
 public class MainClass {
-/*
-        public static void main(String[] args) {
 
+
+
+
+        public static void main(String[] args) {
+            /*ArrayList<Employee> employees = new ArrayList<>();
+
+            Employee e1 = new Employee("Habib","Rasheed",44,4000);
+            Employee e2 = new Employee("Kareem","Sultan",40,5000);
+            Employee e3 = new Employee("Rizwan","Yousuf",42,6000);
+            employees.add(e1);
+            employees.add(e2);
+            employees.add(e3);
+
+            System.out.println(e1.getFirst_name());*/
+  /*          EmployeeList eList = new EmployeeList();
+            System.out.println("Main List is " +eList.checkListSize());
+            eList.addListEmployee();
+
+            eList.showList();
+            eList.removeListEmployee("Amer");
+            eList.showList();
+
+
+            Employee e = new Employee("a","b",22,20000);
+            System.out.println("Before"+e.getSalary());
+            e.increaseSalary(10);
+            System.out.println("after"+e.getSalary());
+
+        //    int sal = increaseSalary_Of_Specific_Employee_in_List(50,"Habib");
+          //  System.out.println(sal);
+*/
+        }
+/*
+    public static int increaseSalary_Of_Specific_Employee_in_List (int percentage, String first_name){
+
+        int send = 0;
+        Employee[] employees;
+        for (Employee name : employees ) {
+            if (name.getFirst_name() == first_name)
+                send = name.increaseSalary(percentage);
+            System.out.println("New salary is "+ name.getSalary());
+
+        }
+        System.out.println("List is "+employees);
+        return send;
+    }*/
+        }
+/*
         EmployeeList personnel = new EmployeeList();
         int employeeCount = personnel.size();
         System.out.println("Employee count before is "+ employeeCount);
@@ -27,4 +73,4 @@ public class MainClass {
       //  personnel.increaseSalaryInList(50,employee101.first_name);
    }
 */
-}
+
